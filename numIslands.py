@@ -47,3 +47,12 @@ if __name__ == "__main__":
     ]
 
     print("Output is : ", sol.numIslands(grid))
+    
+    grid2 = [
+        ["1","1","0","0","0"],
+        ["1","1","0","0","0"],
+        ["0","0","1","0","0"],
+        ["0","0","0","1","1"]
+    ]
+
+    print("Output is : ", sol.numIslands(grid2))
