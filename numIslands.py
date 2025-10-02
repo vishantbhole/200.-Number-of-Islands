@@ -11,3 +11,8 @@ class Solution:
 
         visited = set()
         islands = 0
+        
+        def bfs(r,c):
+            q = collections.deque()
+            visited.add((r,c))
+            q.append((r,c))
