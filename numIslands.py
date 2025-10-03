@@ -28,3 +28,31 @@ class Solution:
                             (r,c) not in visited):
                         q.append((r,c))
                         visited.add((r,c))
+
+        for r in range(rows):
+            for c in range(cols):
+                if grid[r][c] == "1" and (r,c) not in visited:
+                    bfs(r,c)
+                    islands += 1
+        return islands
+
+
+if __name__ == "__main__":
+    sol = Solution()
+    grid = [
+        ["1","1","1","1","0"],
+        ["1","1","0","1","0"],
+        ["1","1","0","0","0"],
+        ["0","0","0","0","0"]
+    ]
+
+    print("Output is : ", sol.numIslands(grid))
+    
+    grid2 = [
+        ["1","1","0","0","0"],
+        ["1","1","0","0","0"],
+        ["0","0","1","0","0"],
+        ["0","0","0","1","1"]
+    ]
+
+    print("Output is : ", sol.numIslands(grid2))
